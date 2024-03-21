@@ -10,7 +10,7 @@ body {
     justify-content: space-around;
     align-items: center;
     margin: 10px 20px;
-    padding: 10px 20px;
+    padding: 6px 12px;
     border: 3px solid #b0b5a3;
     box-shadow: 0px 0px 5px 1px rgba(105,82,57,0.75);
 }
@@ -42,13 +42,14 @@ body {
     background-color: #b0b5a3;
     margin: 10px 20px;
     padding: 0px 90px;
+    height: 46vh;
 }
 
 /* Styling the presentation landing card*/
 
 .home img {
-    width: 600px;
-    height: 600px;
+    width: 460px;
+    height: 460px;
 }
 
 /* MAKING THE INFO CARD STYLING FOR THE PRESENTATION H1, PARAGRAPH AND ANCHOR TAG*/
@@ -58,12 +59,11 @@ body {
     align-items: center;
     row-gap: 12px;
     
-    
 }
 
 /* STYLING THE TEXT COLOR, SIZE AND OTHER PROPERTIES */
 .homePresentation h1 {
-    font-size: 10rem;
+    font-size: 8rem;
     color: #695239;
 }
 
@@ -88,3 +88,89 @@ body {
 .homePresentation .anchor:hover {
     transform: scale(1.1);
 }
+
+/*CARDS CONTAINER */
+.homeCards {
+    display: flex;
+    margin: 14px 20px;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #CC896C;
+    padding: 12px;
+    height: 42vh;
+
+}
+/* > FOR EDITING JUST THE H2 CHILDS*/
+#bestSellersHeading {
+    color:#695239;
+    font-weight: 800;
+    border-radius: 12px;
+    background-color:white; 
+    padding: 12px ;
+}
+/* MAKE ALL CHILD (NOT HAVE MARGIN)*/
+.homeCards> {
+    margin: 0;
+}
+
+/* PREVIEW MODEL CARD */
+.previewCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 12px 12px;
+    row-gap: 3px;
+    width: 15%;
+
+    border-radius: 6px;
+    background-color:white;
+    
+}
+
+.previewCard h2 {
+    color:#695239;
+    font-size: 1.5em;
+}
+
+.previewCard h3 {
+    font-size: 16px;
+    text-align: center;
+}
+
+.previewCard img {
+    width: 144px;
+    height: 180px;
+    align-self: center;
+}
+
+.previewCard p {
+    font-style: italic;
+    margin: 0;
+    color:#695239;
+}
+
+.previewCard .addToCart {
+    text-decoration: none;
+    color: #E0D9D1;
+    background-color: #CC896C;
+    padding: 6px 12px;
+    border-radius: 6px;
+    width: 50%;
+    text-align: center;
+}
+
+
+
+/* CHOOSE A SIZE BOX (CONTAINS LABEL AND SELECTOR)*/
+.sizeContainer {
+    display: flex;
+    column-gap: 6px;
+    justify-content: center;
+
+}
+
+.sizeContainer > select {
+
+    height: 1.5em;
+}
+
