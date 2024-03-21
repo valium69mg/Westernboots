@@ -1,0 +1,90 @@
+body {
+    background-color:  #E0D9D1;
+}
+
+/* MENU BAR STYLING */
+
+/* GENERAL CONTAINER PROPERTIES */
+.menuBar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 10px 20px;
+    padding: 10px 20px;
+    border: 3px solid #b0b5a3;
+    box-shadow: 0px 0px 5px 1px rgba(105,82,57,0.75);
+}
+
+/* STYLING FOR H1 Western Boots in menuBar*/
+
+.menuBar h1 {
+    font-family: sans-serif;
+    font-size: 1.5em;
+    font-weight: bolder;
+    color: #695239;
+}
+
+/* STYLING FOR LINKS ON MENU BAR */
+
+.menuBar .anchor {
+    font-family: sans-serif;
+    font-weight: 600;
+    text-decoration: none;
+    color: #695239;
+}
+
+/* STYLING FOR HOME PAGE */
+
+.home {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #b0b5a3;
+    margin: 10px 20px;
+    padding: 0px 90px;
+}
+
+/* Styling the presentation landing card*/
+
+.home img {
+    width: 600px;
+    height: 600px;
+}
+
+/* MAKING THE INFO CARD STYLING FOR THE PRESENTATION H1, PARAGRAPH AND ANCHOR TAG*/
+.homePresentation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 12px;
+    
+    
+}
+
+/* STYLING THE TEXT COLOR, SIZE AND OTHER PROPERTIES */
+.homePresentation h1 {
+    font-size: 10rem;
+    color: #695239;
+}
+
+.homePresentation p {
+    font-family: sans-serif;
+    font-size: 1.5rem;
+    width: 60%;
+    text-align: center;
+    color: black;
+}
+
+.homePresentation .anchor {
+    width: 220px;
+    padding: 12px 12px;
+    color: white;
+    background-color: #CC896C;
+    text-align: center;
+    border-radius: 6px;
+    transition: all ease 0.5s;
+}
+
+.homePresentation .anchor:hover {
+    transform: scale(1.1);
+}
