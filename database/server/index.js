@@ -1,4 +1,17 @@
 import { Pool } from 'postgres-pool';
+import express from 'express';
+
+
+const app = express();
+const port = 3000;
+
+app.get('/',(req,res) => {
+  res.sendStatus(200);
+});
+
+app.listen(port, () => {
+  console.log(`app listening on port ${port}`)
+});
 
 const pool = new Pool({
   host: 'localhost',
@@ -16,11 +29,22 @@ const pool = new Pool({
   connectionTimeoutMillis: 5000,
 });
 
-const connection = await pool.connect();
-try {
-    const results = await connection.query('SELECT * from items');
-    console.log(results);
-  } finally {
-    // NOTE: You MUST call connection.release() to return the connection back to the pool
-    await connection.release();
+
+
+async function CreateItem(title,description,price,image_url) {
+    const connection = await pool.connect();
+    try {
+        const results = await connection.query(
+          'INSERT INTO items (title,description,price,image_url) VALUES ($1,$2,$3,$4)', 
+          [title,description,price,image_url]);
+        if (results.rowCount === 1) {
+          return true; // RETURNS TRUE IF THE INSERT IS SUCCESFULL
+        }
+      }catch(err){    
+        console.log(err);
+        return false; // FALSE IF IT IS UNSUCESSFUL
+      } finally {
+        await connection.release();
   }
+};
+
