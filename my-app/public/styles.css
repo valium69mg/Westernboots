@@ -102,11 +102,13 @@ body {
 }
 /* > FOR EDITING JUST THE H2 CHILDS*/
 #bestSellersHeading {
-    color:#695239;
+    color:#fff;
     font-weight: 800;
+    font-size: 3rem;
+    width: 300px;
+    text-align: center;
     border-radius: 12px;
-    background-color:white; 
-    padding: 12px ;
+    padding: 24px ;
 }
 /* MAKE ALL CHILD (NOT HAVE MARGIN)*/
 .homeCards> {

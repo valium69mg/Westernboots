@@ -67,7 +67,7 @@ export default function Home() {
            </div>
            
            <div className="homeCards">
-           <h2 id="bestSellersHeading"> Our best sellers. </h2>
+           <h2 id="bestSellersHeading"> Our best sellers </h2>
                 {cardInfo.map((element => {
                     return (<Card
                         name={element.name}
